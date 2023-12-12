@@ -1,0 +1,247 @@
+:root{
+    --container-back:#fff;
+    --content-back:rgb(243 245 255);
+    --link-color:hsl(245, 75%, 52%);
+    --paragraph-color:hsla(224, 23%, 55%, 0.856);
+    --butt-color:hsl(245, 75%, 52%);
+    --shadow-color:hsl(245deg 75% 52% / 27%);
+    --rmady-color:hsla(224, 30%, 49%, 0.856);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(../images/pattern-background-desktop.svg) ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #E0E8FF ;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 94vh;
+    padding-left: 20px;
+    padding-right:20px ;
+}
+.container{
+    max-width: 430px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 0px 10px 20px 1px rgb(15 67 188 / 10%);
+    background-color: var(--container-back);
+}
+.container .desktop-img{
+    max-width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+section{
+    padding: 35px 45px;
+}
+section h1{
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+}
+section > p {
+    font-size: 16px;
+    color:hsla(224, 23%, 55%, 0.856);
+    margin: 14px 0 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+.mu-content{
+    padding: 10px;
+    background: var(--content-back);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+.mu-content > a{
+    margin-right: 13px;
+    color: var(--link-color);
+    font-weight: 700;
+    font-size: 14px;
+
+}
+.mu-content .lef{
+    display: flex;
+    align-items: center;
+
+} 
+.mu-content .lef img{
+    padding: 10px;
+}
+.mu-content .lef .para{
+    padding: 10px;
+    margin-left: 5px;
+}
+.mu-content .lef .para p{
+    color:var(--paragraph-color);
+}
+.mu-content .lef .para h5{
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+@media (max-width:420px){
+    .mu-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .mu-content .lef img{
+        width: 42px;
+        padding: 3px;
+    }
+    .mu-content > a{
+        margin: auto;
+        font-size: 13px;
+    }
+    .mu-content .lef .para{
+        display: flex;
+        padding: 0px;
+        max-width:100%;   
+    }
+    .mu-content .lef .para p{
+        margin-left: 15px;
+        font-size: 14px;
+    }
+    .mu-content .lef .para h5{
+        font-size: 15px;
+    }
+}
+section button{
+    width: 100%;
+    margin-top: 27px;
+    margin-bottom: 27px;
+    padding: 16px 0px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: var(--butt-color);
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0px 8px 20px var(--shadow-color) ;
+}
+section .can{
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    font-weight: 900;
+    font-size: 16px;
+    color: var(--rmady-color);
+
+}
+footer{
+    height: 6vh;
+}
+@media (max-width:393px){
+    .mu-content .lef .para{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mu-content .lef img{
+        width: 43px;
+        position: relative;
+        bottom: 6px;
+    }
+    .mu-content .lef .para p{
+        margin-left: 0px;
+    }
+    .mu-content{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+    .mu-content > a{
+        margin-right: 2px;
+    }
+    section{
+        padding: 29px 35px;
+    }
+    section h1{
+        font-size: 22px;
+    }
+    section > p{
+        margin-top: 8px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    section button{
+        font-size: 13px;
+        margin: 20px 0 15px;
+    }
+    section .can{
+        font-size: 14px;
+    }
+    body{
+        background-image: url(../images/pattern-background-mobile.svg) ;
+        background-color: #d4dffc;
+    }
+}
+@media (max-width:355px){
+    .mu-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .mu-content > a{
+        margin: 5px 0 0 50px;
+
+    }
+    section{
+        padding: 22px 33px 29px;
+    }
+    section h1,
+    section > p{
+        text-align: start;
+    }
+    section h1{
+        font-size: 20px;
+    }
+    
+}
+@media (max-width:281px){
+    section > p{
+        margin-top: 4px;
+    }
+    section h1{
+        font-size: 18px;
+    }
+    section{
+        padding: 15px 25px 25px;
+    }
+    main{
+        padding-left: 10px;
+        padding-right:10px ;
+        height: 92vh;
+    }
+    footer{
+        height: 8vh;
+    }
+    .mu-content .lef .para h5{
+        font-size: 14px;
+    }
+}
